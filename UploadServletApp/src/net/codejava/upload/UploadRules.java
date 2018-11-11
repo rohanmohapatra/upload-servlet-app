@@ -26,7 +26,7 @@ import org.apache.commons.io.FilenameUtils;
 public class UploadRules extends HttpServlet {
     private static final long serialVersionUID = 1L;
  
-    private static final String UPLOAD_DIRECTORY = "D:/Study/Springfield/upload/rules";
+    private static final String UPLOAD_DIRECTORY = "C:/upload/rules";
     private static final int THRESHOLD_SIZE     = 1024 * 1024 * 3;  // 3MB
     private static final int MAX_FILE_SIZE      = 1024 * 1024 * 40; // 40MB
     private static final int MAX_REQUEST_SIZE   = 1024 * 1024 * 50; // 50MB
@@ -99,7 +99,7 @@ public class UploadRules extends HttpServlet {
                     	getServletContext().getRequestDispatcher("/message.jsp").forward(request, response);
                     	
                     	//boolean isWindows = System.getProperty("os.name").toLowerCase().startsWith("windows");
-                    	String[] command = {"cmd.exe","/c","D:\\Python 35\\python3","D:/Study/Springfield/upload/pdftest.py","--file",realFileName,"--rules",fileExt + "Rules.txt"};
+                    	String[] command = {"cmd.exe","/c","D:\\Python 35\\python3","C:/upload/pdftest.py","--file",realFileName,"--rules",fileExt + "Rules.txt"};
                     	try {
 
                             // print a message

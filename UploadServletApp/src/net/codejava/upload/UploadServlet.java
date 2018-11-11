@@ -24,7 +24,7 @@ import org.apache.commons.io.FilenameUtils;
 public class UploadServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
  
-    private static final String UPLOAD_DIRECTORY = "D:/Study/Springfield/upload/pdf";
+    private static final String UPLOAD_DIRECTORY = "C:/upload/pdf";
     private static final int THRESHOLD_SIZE     = 1024 * 1024 * 3;  // 3MB
     private static final int MAX_FILE_SIZE      = 1024 * 1024 * 40; // 40MB
     private static final int MAX_REQUEST_SIZE   = 1024 * 1024 * 50; // 50MB
@@ -56,6 +56,7 @@ public class UploadServlet extends HttpServlet {
         //    + File.separator + UPLOAD_DIRECTORY;
         // creates the directory if it does not exist
         String uploadPath = UPLOAD_DIRECTORY;
+        //String uploadPath = getServletContext().getRealPath(UPLOAD_DIRECTORY);
         
         File uploadDir = new File(uploadPath);
         if (!uploadDir.exists()) {
